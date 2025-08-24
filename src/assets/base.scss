@@ -1,0 +1,33 @@
+// Base colors
+$neutral-white: #fff;
+$neutral-500: #566574;
+$neutral-700: #303e49;
+
+$primary-500: #1052e0;
+$primary-50: #edf3ff;
+
+$system-success-500: #1e976c;
+
+// Semantic colors
+$text-color: $neutral-500;
+$bg-color: $neutral-white;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: $text-color;
+  background: $bg-color;
+  line-height: 24px;
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
