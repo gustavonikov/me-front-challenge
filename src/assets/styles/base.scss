@@ -1,17 +1,17 @@
 // Color Tokens
-$neutral-white: #ffffff;
-$neutral-300: #a3acb6;
-$neutral-500: #566574;
-$neutral-700: #303e49;
+$color-neutral-white: #ffffff;
+$color-neutral-300: #a3acb6;
+$color-neutral-500: #566574;
+$color-neutral-700: #303e49;
 
-$primary-500: #1052e0;
-$primary-50: #edf3ff;
+$color-primary-500: #1052e0;
+$color-primary-50: #edf3ff;
 
-$system-success-500: #1e976c;
+$color-success-500: #1e976c;
 
 // Semantic colors
-$text-color: $neutral-500;
-$bg-color: $neutral-white;
+$text-color: $color-neutral-500;
+$bg-color: $color-neutral-white;
 
 *,
 *::before,
