@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" :class="[`-${name}`, sizeClass, colorClass]" :style="iconStyle" :title="title">
+  <svg class="icon" :class="[`-size-${props.size}`, colorClass]" :style="iconStyle" :title="title">
     <use :xlink:href="`#icon-${name}`" />
   </svg>
 </template>
@@ -24,10 +24,6 @@ const props = defineProps({
   },
 })
 
-const sizeClass = computed(() => {
-  return `-size-${props.size}`
-})
-
 const colorClass = computed(() => {
   return props.color !== 'inherit' ? `-color-${props.color}` : ''
 })
@@ -41,16 +37,13 @@ const colorClass = computed(() => {
   fill: currentColor;
 
   &.-size-small {
-    width: 16px;
-    height: 16px;
+    font-size: 16px;
   }
   &.-size-medium {
-    width: 24px;
-    height: 24px;
+    font-size: 24px;
   }
   &.-size-large {
-    width: 32px;
-    height: 32px;
+    font-size: 32px;
   }
 
   &.-color-neutral-500 {
