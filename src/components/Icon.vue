@@ -20,7 +20,7 @@ const props = defineProps({
   color: {
     type: String,
     default: 'inherit',
-    validator: (value) => value === 'inherit' || ['neutral-500'].includes(value),
+    validator: (value) => value === 'inherit' || ['neutral-300', 'neutral-500'].includes(value),
   },
 })
 
