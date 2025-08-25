@@ -47,14 +47,12 @@ defineProps({
   font-size: 10px;
   border-radius: 6px;
 }
-
 .-size-md {
   height: 24px;
   padding: 4px;
   font-size: 12px;
   border-radius: 8px;
 }
-
 .-size-lg {
   height: 32px;
   padding: 8px;

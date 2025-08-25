@@ -46,31 +46,26 @@ const attrs = useAttrs()
   font-size: 24px;
   line-height: 32px;
 }
-
 .-type-headline-h5 {
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
 }
-
 .-type-headline-h6 {
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
 }
-
 .-type-subtitle {
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
 }
-
 .-type-body-semibold {
   font-weight: 600;
   font-size: 14px;
   line-height: 120%;
 }
-
 .-type-caption {
   font-weight: 400;
   font-size: 12px;
@@ -80,19 +75,15 @@ const attrs = useAttrs()
 .-color-neutral-white {
   color: $color-neutral-white;
 }
-
 .-color-neutral-300 {
   color: $color-neutral-300;
 }
-
 .-color-neutral-500 {
   color: $color-neutral-500;
 }
-
 .-color-neutral-700 {
   color: $color-neutral-700;
 }
-
 .-color-success-500 {
   color: $color-success-500;
 }
