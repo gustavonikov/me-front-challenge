@@ -5,7 +5,7 @@
 </template>
 
 <script setup>
-import { defineProps, useAttrs } from 'vue'
+import { useAttrs } from 'vue'
 
 defineProps({
   tag: {
