@@ -35,22 +35,24 @@ const colorClass = computed(() => {
   vertical-align: middle;
   flex-shrink: 0;
   fill: currentColor;
+  width: 1em;
+  height: 1em;
 
   &.-size-sm {
-    height: 16px;
-    width: 16px;
+    font-size: 16px;
   }
   &.-size-md {
-    height: 24px;
-    width: 24px;
+    font-size: 24px;
   }
   &.-size-lg {
-    height: 32px;
-    width: 32px;
+    font-size: 32px;
   }
 
   &.-color-neutral-500 {
     color: $color-neutral-500;
+  }
+  &.-color-neutral-300 {
+    color: $color-neutral-300;
   }
 }
 </style>
