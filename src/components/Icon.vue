@@ -14,8 +14,8 @@ const props = defineProps({
   },
   size: {
     type: String,
-    default: 'medium',
-    validator: (value) => ['small', 'medium', 'large'].includes(value),
+    default: 'md',
+    validator: (value) => ['sm', 'md', 'lg'].includes(value),
   },
   color: {
     type: String,
@@ -36,13 +36,13 @@ const colorClass = computed(() => {
   flex-shrink: 0;
   fill: currentColor;
 
-  &.-size-small {
+  &.-size-sm {
     font-size: 16px;
   }
-  &.-size-medium {
+  &.-size-md {
     font-size: 24px;
   }
-  &.-size-large {
+  &.-size-lg {
     font-size: 32px;
   }
 

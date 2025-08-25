@@ -19,9 +19,9 @@ describe('Icon', () => {
 
   it('applies size prop when passed', () => {
     const wrapper = mount(Icon, {
-      props: { name: 'close', size: 'large' }
+      props: { name: 'close', size: 'lg' }
     })
-    expect(wrapper.classes().includes('-size-large')).toBe(true)
+    expect(wrapper.classes().includes('-size-lg')).toBe(true)
   })
 
   it('applies color prop as a class', () => {
