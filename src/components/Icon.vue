@@ -1,5 +1,5 @@
 <template>
-  <svg class="icon" :class="[`-size-${props.size}`, colorClass]" :style="iconStyle" :title="title">
+  <svg :class="['icon', `-size-${size}`, colorClass]">
     <use :xlink:href="`#icon-${name}`" />
   </svg>
 </template>
@@ -37,13 +37,16 @@ const colorClass = computed(() => {
   fill: currentColor;
 
   &.-size-sm {
-    font-size: 16px;
+    height: 16px;
+    width: 16px;
   }
   &.-size-md {
-    font-size: 24px;
+    height: 24px;
+    width: 24px;
   }
   &.-size-lg {
-    font-size: 32px;
+    height: 32px;
+    width: 32px;
   }
 
   &.-color-neutral-500 {
