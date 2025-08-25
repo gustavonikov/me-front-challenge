@@ -1,23 +1,25 @@
 <template>
-  <div class="order-details-page">
-    <pre-order-header />
+  <vPageContainer>
+    <div class="order-details-page">
+      <vPreOrderHeader />
 
-    <supplier-info />
+      <vSupplierInfo />
 
-    <addresses-section />
-  </div>
+      <vAddressesSection />
+    </div>
+  </vPageContainer>
 </template>
 
 <script setup>
-import PreOrderHeader from '@/components/PreOrderHeader.vue'
-import SupplierInfo from '@/components/SupplierInfo.vue'
-import AddressesSection from '@/components/AddressesSection.vue'
+import vPageContainer from '@/components/PageContainer.vue'
+import vPreOrderHeader from '@/components/PreOrderHeader.vue'
+import vSupplierInfo from '@/components/SupplierInfo.vue'
+import vAddressesSection from '@/components/AddressesSection.vue'
 </script>
 
 <style lang="scss" scoped>
 .order-details-page {
   width: 100%;
-  padding: 24px;
   display: flex;
   flex-direction: column;
   align-items: center;
