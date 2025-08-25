@@ -14,15 +14,15 @@ describe('Badge.vue', () => {
 
   it('applies a bg color class when bgColor prop is passed', () => {
     const wrapper = mount(Badge, {
-      props: { bgColor: 'secondary' }
+      props: { variant: 'primary-light' }
     })
-    expect(wrapper.classes()).toContain('-bg-color-secondary')
+    expect(wrapper.classes()).toContain('-variant-primary-light')
   })
 
   it('applies a bg color class when color prop is passed', () => {
     const wrapper = mount(Badge, {
-      props: { color: 'success' }
+      props: { size: 'sm' }
     })
-    expect(wrapper.classes()).toContain('-color-success')
+    expect(wrapper.classes()).toContain('-size-sm')
   })
 })
