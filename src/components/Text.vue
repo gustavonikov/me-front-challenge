@@ -10,7 +10,7 @@ import { defineProps, useAttrs } from 'vue'
 defineProps({
   tag: {
     type: String,
-    default: 'p',
+    default: 'span',
   },
   type: {
     type: String,
