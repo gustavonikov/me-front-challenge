@@ -1,14 +1,16 @@
 <template>
   <div class="card-billing-address">
     <div class="card-billing-address-header">
-      <vText v-if="label">{{ label }}</vText>
+      <vText v-if="label" data-testid="card-label">{{ label }}</vText>
 
       <div class="company-name-wrapper">
-        <vText v-if="company.name" type="body-semibold" color="neutral-700">
+        <vText type="body-semibold" color="neutral-700" data-testid="company-name">
           {{ company.name }}
         </vText>
 
-        <vBadge v-if="company.code" variant="primary-light">#{{ company.code }}</vBadge>
+        <vBadge v-if="company.code" variant="primary-light" data-testid="company-code">
+          #{{ company.code }}
+        </vBadge>
       </div>
     </div>
 
