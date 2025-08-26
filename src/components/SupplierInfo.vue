@@ -19,6 +19,7 @@
         { type: 'readAt', value: '2020-05-23T12:45:20.39' },
       ],
     }"
+    details-layout="columns"
   />
 </template>
  

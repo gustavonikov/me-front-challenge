@@ -17,7 +17,7 @@
     <vCompanyDetails
       :billing-info="company.billingInfo"
       :communication-info="company.communicationInfo"
-      layout="columns"
+      :layout="detailsLayout"
     />
   </div>
 </template>
@@ -35,6 +35,10 @@ defineProps({
   company: {
     type: Object,
     default: () => ({}),
+  },
+  detailsLayout: {
+    type: String,
+    default: 'stacked',
   },
 })
 </script>
