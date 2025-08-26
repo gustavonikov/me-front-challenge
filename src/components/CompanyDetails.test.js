@@ -59,9 +59,9 @@ describe('CompanyDetails', () => {
     })
   })
 
-  it('defaults to "columns" layout when no layout prop is provided', () => {
+  it('defaults to "stacked" layout when no layout prop is provided', () => {
     const wrapper = createWrapper({ billingInfo, communicationInfo })
-    expect(wrapper.classes()).toContain('-layout-columns')
+    expect(wrapper.classes()).toContain('-layout-stacked')
   })
 
   it('applies the correct layout class based on the layout prop', () => {

@@ -44,7 +44,7 @@ defineProps({
   },
   layout: {
     type: String,
-    default: 'columns',
+    default: 'stacked',
     validator: (value) => ['columns', 'rows', 'stacked'].includes(value),
   },
 })
