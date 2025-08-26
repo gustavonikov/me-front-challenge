@@ -57,7 +57,10 @@ defineProps({
 
 .-layout {
   &-columns {
-    justify-content: space-between;
+    .billing-details,
+    .communication-details {
+      flex: 1;
+    }
   }
 
   &-rows {
