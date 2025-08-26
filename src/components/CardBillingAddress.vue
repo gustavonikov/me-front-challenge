@@ -4,9 +4,11 @@
       <vText v-if="company.label">{{ company.label }}</vText>
 
       <div class="company-name-wrapper">
-        <vText v-if="company.name">{{ company.name }}</vText>
+        <vText v-if="company.name" type="body-semibold" color="neutral-700">{{
+          company.name
+        }}</vText>
 
-        <vText v-if="company.code">{{ company.code }}</vText>
+        <vBadge v-if="company.code" variant="primary-light">#{{ company.code }}</vBadge>
       </div>
     </div>
 
@@ -20,6 +22,7 @@
 
 <script setup>
 import vCompanyDetails from './CompanyDetails.vue'
+import vBadge from './globals/Badge.vue'
 import vText from './globals/Text.vue'
 
 defineProps({
@@ -41,8 +44,14 @@ defineProps({
 
 .card-billing-address-header {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   margin-bottom: 16px;
+}
+
+.company-name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 </style>
