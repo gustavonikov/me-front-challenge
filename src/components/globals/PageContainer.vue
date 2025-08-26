@@ -20,7 +20,7 @@ defineProps({
   margin: 0 auto;
   padding: 24px;
 
-  @media screen and (max-width: 768px) {
+  @include mq(md, 'max') {
     padding: 0 12px 12px;
   }
 }
