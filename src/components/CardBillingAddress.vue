@@ -15,7 +15,7 @@
     <vCompanyDetails
       :billing-info="company.billingInfo"
       :communication-info="company.communicationInfo"
-      :layout="layout"
+      layout="columns"
     />
   </div>
 </template>
