@@ -22,7 +22,7 @@
 </template>
 
 <script setup>
-import { defineProps, computed } from 'vue'
+import { computed } from 'vue'
 
 import vIcon from './Icon.vue'
 
