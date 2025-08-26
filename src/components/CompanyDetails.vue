@@ -76,6 +76,10 @@ defineProps({
 
   &-stacked {
     flex-direction: column;
+
+    .communication-details {
+      margin-top: 4px;
+    }
   }
 }
 
