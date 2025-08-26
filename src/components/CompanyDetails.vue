@@ -6,7 +6,7 @@
       role="group"
       aria-label="Company Billing information"
     >
-      <CompanyInfoField
+      <vCompanyDetailsField
         v-for="field in billingData"
         :key="field.infoType"
         :field="field.infoType"
@@ -20,7 +20,7 @@
       role="group"
       aria-label="Company Contact information"
     >
-      <CompanyInfoField
+      <vCompanyDetailsField
         v-for="field in communicationData"
         :key="field.infoType"
         :field="field.infoType"
@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import CompanyInfoField from './CompanyInfoField.vue'
+import vCompanyDetailsField from './CompanyDetailsField.vue'
 
 defineProps({
   billingData: {

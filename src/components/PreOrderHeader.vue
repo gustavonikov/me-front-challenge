@@ -12,7 +12,7 @@
       <div class="buyer-info">
         <vText class="title" tag="h1" type="headline-h5" color="neutral-700">MTP West Buyer</vText>
 
-        <vCompanyInfo
+        <vCompanyDetails
           :billing-data="[
             {
               infoType: 'name',
@@ -44,7 +44,7 @@
 </template>
  
 <script setup>
-import vCompanyInfo from './CompanyInfo.vue'
+import vCompanyDetails from './CompanyDetails.vue'
 import vIcon from './Icon.vue'
 import vText from './Text.vue'
 </script>
