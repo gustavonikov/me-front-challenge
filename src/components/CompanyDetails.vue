@@ -18,7 +18,7 @@
       v-if="communicationData.length"
       class="communication-section"
       role="group"
-      aria-label="Company Contact information"
+      aria-label="Company Communication information"
     >
       <vCompanyDetailsField
         v-for="field in communicationData"
