@@ -1,7 +1,7 @@
 <template>
   <div class="card-billing-address">
     <div class="card-billing-address-header">
-      <vText v-if="company.label">{{ companyLabel }}</vText>
+      <vText v-if="company.label">{{ company.label }}</vText>
 
       <div class="company-name-wrapper">
         <vText v-if="company.name">{{ company.name }}</vText>
