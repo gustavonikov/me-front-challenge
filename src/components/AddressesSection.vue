@@ -7,7 +7,7 @@
     <template #body>
       <div class="addresses-wrapper">
         <vCardBillingAddress
-          v-for="{ label, company } in addressesInfo"
+          v-for="{ label, company } in data"
           :key="company.name"
           :label="label"
           :company="company"
@@ -25,7 +25,7 @@ import vText from './globals/Text.vue'
 import vCardBillingAddress from './CardBillingAddress.vue'
 
 defineProps({
-  addressesInfo: {
+  data: {
     type: Array,
     default: () => [],
   },
