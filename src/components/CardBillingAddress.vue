@@ -4,9 +4,9 @@
       <vText v-if="company.label">{{ company.label }}</vText>
 
       <div class="company-name-wrapper">
-        <vText v-if="company.name" type="body-semibold" color="neutral-700">{{
-          company.name
-        }}</vText>
+        <vText v-if="company.name" type="body-semibold" color="neutral-700">
+          {{ company.name }}
+        </vText>
 
         <vBadge v-if="company.code" variant="primary-light">#{{ company.code }}</vBadge>
       </div>
