@@ -11,8 +11,8 @@
     </div>
 
     <vCompanyDetails
-      :billing-data="company.billingData"
-      :communication-data="company.communicationData"
+      :billing-info="company.billingInfo"
+      :communication-info="company.communicationInfo"
       :layout="layout"
     />
   </div>
