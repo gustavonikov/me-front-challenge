@@ -13,16 +13,16 @@
         <vText class="title" tag="h1" type="headline-h5" color="neutral-700">MTP West Buyer</vText>
 
         <vCompanyDetails
-          :billing-data="[
+          :billing-info="[
             {
-              infoType: 'name',
+              type: 'name',
               value: 'Jacksonville Group (Jason Burn)',
             },
           ]"
-          :communication-data="[
-            { infoType: 'email', value: 'jacksonvillegroup@me.com' },
-            { infoType: 'phone', value: '903-575-3050' },
-            { infoType: 'fax', value: '999-575-3050' },
+          :communication-info="[
+            { type: 'email', value: 'jacksonvillegroup@me.com' },
+            { type: 'phone', value: '903-575-3050' },
+            { type: 'fax', value: '999-575-3050' },
           ]"
           layout="rows"
         />

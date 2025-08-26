@@ -10,22 +10,22 @@ vi.mock('./CompanyDetailsField.vue', () => ({
   }
 }))
 
-const billingData = [
+const billingInfo = [
   {
-    infoType: 'name',
+    type: 'name',
     value: 'Jacksonville Group (Jason Burn)',
   },
 ]
-const communicationData = [
-  { infoType: 'email', value: 'jacksonvillegroup@me.com' },
-  { infoType: 'phone', value: '903-575-3050' },
-  { infoType: 'fax', value: '999-575-3050' },
+const communicationInfo = [
+  { type: 'email', value: 'jacksonvillegroup@me.com' },
+  { type: 'phone', value: '903-575-3050' },
+  { type: 'fax', value: '999-575-3050' },
 ]
 
 describe('CompanyDetails', () => {
   const createWrapper = (props = {}) => {
     return mount(vCompanyDetails, {
-      props: { billingData: [], communicationData: [], ...props },
+      props: { billingInfo: [], communicationInfo: [], ...props },
     })
   }
 
@@ -36,36 +36,36 @@ describe('CompanyDetails', () => {
   })
 
   it('renders both billing and communication sections when data is present', () => {
-    const wrapper = createWrapper({ billingData, communicationData })
+    const wrapper = createWrapper({ billingInfo, communicationInfo })
     expect(wrapper.find('.billing-details').exists()).toBe(true)
     expect(wrapper.find('.communication-details').exists()).toBe(true)
   })
 
   it('renders billing fields correctly', () => {
-    const wrapper = createWrapper({ billingData, communicationData: [] })
+    const wrapper = createWrapper({ billingInfo, communicationInfo: [] })
     const billingDetails = wrapper.find('.billing-details')
     const billingItems = billingDetails.findAll('[data-testid="mocked-company-details-field"]')
-    expect(billingItems.length).toBe(billingData.length)
-    expect(billingItems[0].text()).toBe(billingData[0].value)
+    expect(billingItems.length).toBe(billingInfo.length)
+    expect(billingItems[0].text()).toBe(billingInfo[0].value)
   })
 
   it('renders communication fields correctly', () => {
-    const wrapper = createWrapper({ billingData: [], communicationData })
+    const wrapper = createWrapper({ billingInfo: [], communicationInfo })
     const communicationDetails = wrapper.find('.communication-details')
     const communicationItems = communicationDetails.findAll('[data-testid="mocked-field"]')
-    expect(communicationItems.length).toBe(communicationData.length)
+    expect(communicationItems.length).toBe(communicationInfo.length)
     communicationItems.forEach((item, index) => {
-      expect(item.text()).toBe(communicationData[index].value)
+      expect(item.text()).toBe(communicationInfo[index].value)
     })
   })
 
   it('defaults to "columns" layout when no layout prop is provided', () => {
-    const wrapper = createWrapper({ billingData, communicationData })
+    const wrapper = createWrapper({ billingInfo, communicationInfo })
     expect(wrapper.classes()).toContain('-layout-columns')
   })
 
   it('applies the correct layout class based on the layout prop', () => {
-    const wrapper = createWrapper({ billingData, communicationData, layout: 'rows' })
+    const wrapper = createWrapper({ billingInfo, communicationInfo, layout: 'rows' })
     expect(wrapper.classes()).toContain('-layout-rows')
   })
 })

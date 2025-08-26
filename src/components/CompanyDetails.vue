@@ -1,30 +1,30 @@
 <template>
   <div :class="`company-info -layout-${layout}`">
     <div
-      v-if="billingData.length"
+      v-if="billingInfo.length"
       class="billing-details"
       role="group"
       aria-label="Company Billing information"
     >
       <vCompanyDetailsField
-        v-for="field in billingData"
-        :key="field.infoType"
-        :field="field.infoType"
-        :value="field.value"
+        v-for="info in billingInfo"
+        :key="info.type"
+        :field="info.type"
+        :value="info.value"
       />
     </div>
 
     <div
-      v-if="communicationData.length"
+      v-if="communicationInfo.length"
       class="communication-details"
       role="group"
       aria-label="Company Communication information"
     >
       <vCompanyDetailsField
-        v-for="field in communicationData"
-        :key="field.infoType"
-        :field="field.infoType"
-        :value="field.value"
+        v-for="info in communicationInfo"
+        :key="info.type"
+        :field="info.type"
+        :value="info.value"
       />
     </div>
   </div>
@@ -34,11 +34,11 @@
 import vCompanyDetailsField from './CompanyDetailsField.vue'
 
 defineProps({
-  billingData: {
+  billingInfo: {
     type: Array,
     default: () => [],
   },
-  communicationData: {
+  communicationInfo: {
     type: Array,
     default: () => [],
   },
