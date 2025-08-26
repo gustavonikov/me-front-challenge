@@ -1,5 +1,5 @@
 <template>
-  <div class="company-info-field">
+  <div class="company-details-field">
     <vIcon :name="iconName" size="sm" />
 
     <vText>{{ value }}</vText>
@@ -38,7 +38,7 @@ const iconName = computed(() => {
 </script>
 
 <style lang="scss" scoped>
-.company-info-field {
+.company-details-field {
   display: flex;
   align-items: center;
   gap: 4px;
