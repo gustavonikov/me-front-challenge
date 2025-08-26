@@ -1,9 +1,9 @@
 <template>
-  <li class="company-info-field">
+  <div class="company-info-field">
     <vIcon :name="iconName" size="sm" />
 
     <vText>{{ value }}</vText>
-  </li>
+  </div>
 </template>
 
 <script setup>
