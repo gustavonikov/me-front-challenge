@@ -2,7 +2,7 @@
   <div :class="`company-info -layout-${layout}`">
     <div
       v-if="billingData.length"
-      class="billing-section"
+      class="billing-details"
       role="group"
       aria-label="Company Billing information"
     >
@@ -16,7 +16,7 @@
 
     <div
       v-if="communicationData.length"
-      class="communication-section"
+      class="communication-details"
       role="group"
       aria-label="Company Communication information"
     >
@@ -64,8 +64,8 @@ defineProps({
     flex-direction: column;
     gap: 4px;
 
-    .billing-section,
-    .communication-section {
+    .billing-details,
+    .communication-details {
       flex-direction: row;
       gap: 4px 16px;
     }
@@ -76,8 +76,8 @@ defineProps({
   }
 }
 
-.billing-section,
-.communication-section {
+.billing-details,
+.communication-details {
   display: flex;
   flex-direction: column;
   gap: 4px;
