@@ -1,7 +1,7 @@
 <template>
   <div class="card-billing-address">
     <div class="card-billing-address-header">
-      <vText v-if="company.label">{{ company.label }}</vText>
+      <vText v-if="label">{{ label }}</vText>
 
       <div class="company-name-wrapper">
         <vText v-if="company.name" type="body-semibold" color="neutral-700">
@@ -26,6 +26,10 @@ import vBadge from './globals/Badge.vue'
 import vText from './globals/Text.vue'
 
 defineProps({
+  label: {
+    type: String,
+    default: '',
+  },
   company: {
     type: Object,
     default: () => ({}),

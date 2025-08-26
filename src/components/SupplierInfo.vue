@@ -1,7 +1,7 @@
 <template>
   <vCardBillingAddress
+    label="Supplier"
     :company="{
-      label: 'Supplier',
       name: 'Motion Industries INC',
       code: '101908',
       billingInfo: [
