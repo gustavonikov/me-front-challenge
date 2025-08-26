@@ -13,17 +13,8 @@
         <vText class="title" tag="h1" type="headline-h5" color="neutral-700">MTP West Buyer</vText>
 
         <vCompanyDetails
-          :billing-info="[
-            {
-              type: 'name',
-              value: 'Jacksonville Group (Jason Burn)',
-            },
-          ]"
-          :communication-info="[
-            { type: 'email', value: 'jacksonvillegroup@me.com' },
-            { type: 'phone', value: '903-575-3050' },
-            { type: 'fax', value: '999-575-3050' },
-          ]"
+          :billing-info="data.billingInfo"
+          :communication-info="data.communicationInfo"
           layout="rows"
         />
       </div>
@@ -47,6 +38,16 @@
 import vCompanyDetails from './CompanyDetails.vue'
 import vIcon from './globals/Icon.vue'
 import vText from './globals/Text.vue'
+
+defineProps({
+  data: {
+    type: Object,
+    default: () => ({
+      billingInfo: [],
+      communicationInfo: [],
+    }),
+  },
+})
 </script>
  
 <style lang="scss" scoped>
