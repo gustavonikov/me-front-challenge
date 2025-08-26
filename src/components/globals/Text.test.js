@@ -1,6 +1,6 @@
 import { it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Text from './Text.vue'
+import Text from './globals/Text.vue'
 
 it('renders the given text', () => {
   const wrapper = mount(Text, { slots: { default: 'Sample Text' } })

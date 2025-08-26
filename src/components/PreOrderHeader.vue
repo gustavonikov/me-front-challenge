@@ -45,8 +45,8 @@
  
 <script setup>
 import vCompanyDetails from './CompanyDetails.vue'
-import vIcon from './Icon.vue'
-import vText from './Text.vue'
+import vIcon from './globals/Icon.vue'
+import vText from './globals/Text.vue'
 </script>
  
 <style lang="scss" scoped>

@@ -2,13 +2,13 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import vCompanyDetailsField from './CompanyDetailsField.vue'
 
-vi.mock('./Text.vue', () => ({
+vi.mock('./globals/Text.vue', () => ({
   default: {
     name: 'vText',
     template: '<span><slot /></span>',
   }
 }))
-vi.mock('./Icon.vue', () => ({
+vi.mock('./globals/Icon.vue', () => ({
   default: {
     name: 'vIcon',
     template: '<i></i>',
