@@ -19,5 +19,9 @@ defineProps({
   min-height: 100dvh;
   margin: 0 auto;
   padding: 24px;
+
+  @media screen and (max-width: 768px) {
+    padding: 0 12px 12px;
+  }
 }
 </style>
