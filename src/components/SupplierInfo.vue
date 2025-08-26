@@ -5,11 +5,11 @@
       name: 'Motion Industries INC',
       code: '101908',
       billingInfo: [
+        { type: 'cnpj', value: 'CNPJ: 00.823.053/0001-02' },
         {
           type: 'address',
           value: 'O Box 1477 - Birmingham AL - 35201-4666 - United States of America',
         },
-        { type: 'cnpj', value: 'CNPJ: 00.823.053/0001-02' },
         { type: 'name', value: 'Jack Jeff Ripple Applejack' },
       ],
       communicationInfo: [
@@ -26,5 +26,5 @@
 import vCardBillingAddress from './CardBillingAddress.vue'
 </script>
  
- <style lang="scss" scoped>
+<style lang="scss" scoped>
 </style>
