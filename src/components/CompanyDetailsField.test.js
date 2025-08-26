@@ -30,7 +30,6 @@ describe('CompanyDetailsField', () => {
 
   it('should render the component correctly', () => {
     const wrapper = createWrapper()
-    console.log(wrapper.html());
 
     expect(wrapper.find('.company-details-field').exists()).toBe(true)
     expect(wrapper.findComponent({ name: 'vText' }).exists()).toBe(true)
