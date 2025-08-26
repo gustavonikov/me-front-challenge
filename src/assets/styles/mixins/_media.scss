@@ -1,0 +1,56 @@
+@use 'sass:map';
+@use 'sass:meta';
+@use '../variables.scss' as *;
+
+@mixin mq($breakpoint, $type: 'min', $orientation: 'width') {
+  $value: null;
+
+  @if meta.type-of($breakpoint) == number {
+    $value: $breakpoint;
+  } @else if map.has-key($breakpoints, $breakpoint) {
+    $value: map.get($breakpoints, $breakpoint);
+  } @else if meta.type-of($breakpoint) == string and string.index($breakpoint, '-') {
+    $parts: str-split($breakpoint, '-');
+    $from: map.get($breakpoints, nth($parts, 1));
+    $to: map.get($breakpoints, nth($parts, 2));
+
+    @if $from and $to {
+      @media (min-#{$orientation}: #{$from}) and (max-#{$orientation}: #{$to - 0.02px}) {
+        @content;
+      }
+    }
+  } @else {
+    @error "Invalid breakpoint: #{$breakpoint}";
+  }
+
+  @if $value {
+    @if $type == 'min' or $type == 'up' {
+      @media (min-#{$orientation}: #{$value}) {
+        @content;
+      }
+    } @else if $type == 'max' or $type == 'down' {
+      @media (max-#{$orientation}: #{$value - 0.02px}) {
+        @content;
+      }
+    } @else if $type == 'only' {
+      $next-breakpoint: null;
+      $breakpoint-keys: map.keys($breakpoints);
+      $current-index: list.index($breakpoint-keys, $breakpoint);
+
+      @if $current-index and $current-index < list.length($breakpoint-keys) {
+        $next-key: list.nth($breakpoint-keys, $current-index + 1);
+        $next-breakpoint: map.get($breakpoints, $next-key);
+      }
+
+      @if $next-breakpoint {
+        @media (min-#{$orientation}: #{$value}) and (max-#{$orientation}: #{$next-breakpoint - 0.02px}) {
+          @content;
+        }
+      } @else {
+        @media (min-#{$orientation}: #{$value}) {
+          @content;
+        }
+      }
+    }
+  }
+}
