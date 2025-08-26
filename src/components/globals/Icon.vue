@@ -15,12 +15,13 @@ const props = defineProps({
   size: {
     type: String,
     default: 'md',
-    validator: (value) => ['sm', 'md', 'lg'].includes(value),
+    validator: (value) => ['xs', 'sm', 'md', 'lg'].includes(value),
   },
   color: {
     type: String,
     default: 'inherit',
-    validator: (value) => value === 'inherit' || ['neutral-300', 'neutral-500'].includes(value),
+    validator: (value) =>
+      value === 'inherit' || ['neutral-300', 'neutral-500', 'primary-500'].includes(value),
   },
 })
 
@@ -38,6 +39,9 @@ const colorClass = computed(() => {
   width: 1em;
   height: 1em;
 
+  &.-size-xs {
+    font-size: 12px;
+  }
   &.-size-sm {
     font-size: 16px;
   }
@@ -53,6 +57,9 @@ const colorClass = computed(() => {
   }
   &.-color-neutral-300 {
     color: $color-neutral-300;
+  }
+  &.-color-primary-500 {
+    color: $color-primary-500;
   }
 }
 </style>
