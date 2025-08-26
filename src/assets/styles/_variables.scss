@@ -1,0 +1,25 @@
+// Color Tokens
+$color-neutral-white: #ffffff;
+$color-neutral-300: #a3acb6;
+$color-neutral-500: #566574;
+$color-neutral-700: #303e49;
+
+$color-primary-500: #1052e0;
+$color-primary-50: #edf3ff;
+
+$color-success-500: #1e976c;
+
+// Semantic colors
+$color-text-primary: $color-neutral-500;
+$color-bg-primary: $color-neutral-white;
+
+// Media queries breakpoints
+
+$breakpoints: (
+  xs: 375px,
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px,
+  xxl: 1600px,
+) !default;
