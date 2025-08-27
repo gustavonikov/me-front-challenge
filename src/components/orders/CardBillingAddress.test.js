@@ -101,6 +101,6 @@ describe('CardBillingAddress', () => {
     const companyDetails = wrapper.findComponent({ name: 'vCompanyDetails' })
     expect(companyDetails.props('billingInfo')).toStrictEqual(companyMock.billingInfo)
     expect(companyDetails.props('communicationInfo')).toStrictEqual(companyMock.communicationInfo)
-    expect(companyDetails.props('layout')).toBe('columns')
+    expect(companyDetails.props('layout')).toBe('stacked')
   })
 })
