@@ -74,6 +74,11 @@ const createdAt = computed(() => {
   width: 100%;
   display: flex;
   gap: 24px;
+
+  @include mq(md, 'max') {
+    flex-direction: column;
+    margin: 0 -16px;
+  }
 }
 
 .pre-order-badge {
@@ -85,12 +90,21 @@ const createdAt = computed(() => {
   border-bottom-right-radius: 8px;
   padding: 16px;
   min-width: 200px;
+
+  @include mq(md, 'max') {
+    margin: 0 -16px;
+    border-radius: 0;
+  }
 }
 
 .pre-order-details {
   width: 100%;
   display: flex;
   gap: 16px;
+
+  @include mq(md, 'max') {
+    flex-direction: column;
+  }
 }
 
 .buyer-info {
@@ -106,6 +120,10 @@ const createdAt = computed(() => {
   flex-direction: column;
   gap: 4px;
   align-items: flex-end;
+
+  @include mq(md, 'max') {
+    align-items: flex-start;
+  }
 }
 
 .pre-order-creation-date {
