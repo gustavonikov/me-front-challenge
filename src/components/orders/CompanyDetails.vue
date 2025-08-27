@@ -78,7 +78,7 @@ defineProps({
       flex-direction: row;
       gap: 4px 16px;
 
-      @include mq(md, 'max') {
+      @include mq(lg, 'max') {
         flex-direction: column;
       }
     }
