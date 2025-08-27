@@ -4,8 +4,8 @@ import AddressesSection from './AddressesSection.vue'
 
 vi.mock('@/components/ui/Collapse.vue', () => ({
   default: {
-    name: 'Collapse',
-    template: '<div data-testid="mocked-collapse"><slot name="title" /><slot name="body" v-if="open" /></div>',
+    name: 'vCollapse',
+    template: '<div data-testid="mocked-collapse"><slot name="title" /><slot name="body" v-show="open" /></div>',
     props: ['open'],
     emits: ['toggle']
   }
@@ -49,12 +49,13 @@ describe('AddressesSection', () => {
     const wrapper = createWrapper()
 
     expect(wrapper.exists()).toBe(true)
-    expect(wrapper.findComponent({ name: 'Collapse' }).exists()).toBe(true)
+    expect(wrapper.findComponent({ name: 'vCollapse' }).exists()).toBe(true)
     expect(wrapper.findComponent({ name: 'vText' }).exists()).toBe(true)
   })
 
-  it('deve renderizar cards para cada item dos dados', () => {
+  it('deve renderizar cards para cada item dos dados', async () => {
     const wrapper = createWrapper({ data: mockData })
+
     const cards = wrapper.findAllComponents({ name: 'vCardBillingAddress' })
 
     expect(cards.length).toBe(mockData.length)
