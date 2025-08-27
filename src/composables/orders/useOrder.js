@@ -2,7 +2,7 @@ import { ref } from 'vue'
 import { OrderService } from '@/services/orders/OrderService'
 import { httpClient } from '@/config/httpConfig'
 import { API_STATUS } from '@/constants/apiStatus'
-import { normalizeAddresses, normalizeHeader, normalizeSupplier } from './orderNormalizers'
+import { normalizeAddresses, normalizeHeader, normalizeSupplier } from './orderNormalizer'
 
 export function useOrder() {
   const orderService = new OrderService(httpClient)
