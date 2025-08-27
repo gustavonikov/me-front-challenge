@@ -73,8 +73,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - `npm run test:e2e`: Inicia a aplicação e executa os testes de ponta a ponta em modo headless (sem interface gráfica).
 - `npm run test:e2e:dev`: Inicia a aplicação e abre a interface do Cypress para rodar os testes em modo interativo.
 - `npm run test:e2e:dev -- --spec "cypress/e2e/<nome-do-arquivo>.cy.js"`: Abre o Cypress e roda os testes apenas para um arquivo específico.
-- `npm run test:e2e:dev`: Inicia a aplicação e abre a interface do Cypress para rodar os testes em modo interativo.
-- `npm run test:e2e:dev -- --spec "cypress/e2e/<nome-do-arquivo>.cy.js"`: Abre o Cypress e roda os testes apenas para um arquivo específico.
 
 ### 🎨 Divergências do layout original
 
