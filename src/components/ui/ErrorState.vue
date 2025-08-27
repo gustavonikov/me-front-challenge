@@ -25,8 +25,6 @@
 </template>
  
 <script setup>
-import { defineEmits } from 'vue'
-
 import vText from '@/components/ui/Text.vue'
 
 const emit = defineEmits(['retry'])
