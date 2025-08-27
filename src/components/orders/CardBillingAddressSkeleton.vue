@@ -1,23 +1,29 @@
 <template>
-  <div class="card-billing-address">
-    <div class="card-billing-address-header">
-      <vText v-if="label">{{ label }}</vText>
-      <vSkeleton v-else Skeleton width="80px" height="20px" />
+  <div class="card-billing-address-skeleton" data-testid="card-billing-address-skeleton">
+    <div
+      class="card-billing-address-header-skeleton"
+      data-testid="card-billing-address-header-skeleton"
+    >
+      <vText v-if="label" data-testid="card-billing-address-label-skeleton-filled">
+        {{ label }}
+      </vText>
 
-      <div class="company-name-wrapper">
-        <vSkeleton width="220px" height="17px" />
-        <vSkeleton width="60px" height="24px" radius="8px" />
+      <vSkeleton v-else width="80px" height="20px" test-id="card-billing-address-label" />
+
+      <div class="company-name-wrapper" data-testid="company-name-wrapper-skeleton">
+        <vSkeleton width="220px" height="17px" test-id="company-name" />
+        <vSkeleton width="60px" height="24px" radius="8px" test-id="company-code" />
       </div>
     </div>
 
     <slot>
-      <div class="company-details-skeleton-wrapper">
-        <vSkeleton width="100%" height="16px" />
-        <vSkeleton width="100%" height="16px" />
-        <vSkeleton width="100%" height="16px" />
-        <vSkeleton width="100%" height="16px" />
-        <vSkeleton width="100%" height="16px" />
-        <vSkeleton width="100%" height="16px" />
+      <div class="company-details-skeleton-wrapper" data-testid="company-details-skeleton-wrapper">
+        <vSkeleton width="100%" height="16px" test-id="company-detail" />
+        <vSkeleton width="100%" height="16px" test-id="company-detail" />
+        <vSkeleton width="100%" height="16px" test-id="company-detail" />
+        <vSkeleton width="100%" height="16px" test-id="company-detail" />
+        <vSkeleton width="100%" height="16px" test-id="company-detail" />
+        <vSkeleton width="100%" height="16px" test-id="company-detail" />
       </div>
     </slot>
   </div>
@@ -36,7 +42,7 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-.card-billing-address {
+.card-billing-address-skeleton {
   width: 100%;
   border-radius: 8px;
   padding: 16px;
@@ -44,7 +50,7 @@ defineProps({
   background-color: $color-bg-primary;
 }
 
-.card-billing-address-header {
+.card-billing-address-header-skeleton {
   display: flex;
   flex-direction: column;
   justify-content: space-between;

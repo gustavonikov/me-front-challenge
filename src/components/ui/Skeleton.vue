@@ -1,5 +1,9 @@
 <template>
-  <div :class="['skeleton', ...customClasses]" :style="styles" />
+  <div
+    :class="['skeleton', ...customClasses]"
+    :style="styles"
+    :data-testid="`${testId}-skeleton`"
+  />
 </template>
 
 <script setup>
@@ -20,6 +24,10 @@ const props = defineProps({
   },
   radius: {
     type: [String, Number],
+    default: null,
+  },
+  testId: {
+    type: String,
     default: null,
   },
 })

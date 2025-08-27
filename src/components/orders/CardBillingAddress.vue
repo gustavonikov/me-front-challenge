@@ -1,6 +1,6 @@
 <template>
-  <div class="card-billing-address">
-    <div class="card-billing-address-header">
+  <div class="card-billing-address" data-testid="card-billing-address">
+    <div class="card-billing-address-header" data-testid="card-billing-address-header">
       <vText v-if="label" data-testid="card-label">{{ label }}</vText>
 
       <div class="company-name-wrapper">
