@@ -69,7 +69,7 @@ jobs:
         run: npm run build
 
       - name: Copy Netlify config
-        run: cp netlify.toml _redirects dist/
+        run: cp _redirects dist/
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
