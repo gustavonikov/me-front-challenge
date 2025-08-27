@@ -1,7 +1,7 @@
 <template>
   <vPageContainer>
     <div class="order-details-page">
-      <vPreOrderHeader :data="header" :loading="isPending" />
+      <vPreOrderHeader :loading="isPending" :data="header" />
 
       <vSupplierInfo :data="supplier" />
 

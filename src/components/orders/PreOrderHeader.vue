@@ -82,13 +82,13 @@ import vText from '@/components/ui/Text.vue'
 import vSkeleton from '@/components/ui/Skeleton.vue'
 
 const props = defineProps({
-  data: {
-    type: Object,
-    default: () => ({}),
-  },
   loading: {
     type: Boolean,
     default: false,
+  },
+  data: {
+    type: Object,
+    default: () => ({}),
   },
 })
 
