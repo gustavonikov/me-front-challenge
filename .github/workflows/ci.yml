@@ -68,6 +68,9 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Copy Netlify config
+        run: cp netlify.toml dist/netlify.toml
+
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
         env:
