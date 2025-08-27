@@ -24,8 +24,8 @@
 
 <script setup>
 import vCompanyDetails from './CompanyDetails.vue'
-import vBadge from './globals/Badge.vue'
-import vText from './globals/Text.vue'
+import vBadge from './ui/Badge.vue'
+import vText from './ui/Text.vue'
 
 defineProps({
   label: {

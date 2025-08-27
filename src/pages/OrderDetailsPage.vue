@@ -32,7 +32,7 @@
 </template>
 
 <script setup>
-import vPageContainer from '@/components/globals/PageContainer.vue'
+import vPageContainer from '@/components/ui/PageContainer.vue'
 import vPreOrderHeader from '@/components/PreOrderHeader.vue'
 import vSupplierInfo from '@/components/SupplierInfo.vue'
 import vAddressesSection from '@/components/AddressesSection.vue'

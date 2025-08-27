@@ -20,8 +20,8 @@
  <script setup>
 import { ref } from 'vue'
 
-import Collapse from './globals/Collapse.vue'
-import vText from './globals/Text.vue'
+import Collapse from './ui/Collapse.vue'
+import vText from './ui/Text.vue'
 import vCardBillingAddress from './CardBillingAddress.vue'
 
 defineProps({

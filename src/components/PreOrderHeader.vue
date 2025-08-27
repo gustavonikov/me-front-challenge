@@ -36,8 +36,8 @@
  
 <script setup>
 import vCompanyDetails from './CompanyDetails.vue'
-import vIcon from './globals/Icon.vue'
-import vText from './globals/Text.vue'
+import vIcon from './ui/Icon.vue'
+import vText from './ui/Text.vue'
 
 defineProps({
   data: {

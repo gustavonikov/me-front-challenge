@@ -9,8 +9,8 @@
 <script setup>
 import { computed } from 'vue'
 
-import vText from './globals/Text.vue'
-import vIcon from './globals/Icon.vue'
+import vText from './ui/Text.vue'
+import vIcon from './ui/Icon.vue'
 
 const props = defineProps({
   field: {

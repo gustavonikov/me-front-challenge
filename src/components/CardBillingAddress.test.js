@@ -2,13 +2,13 @@ import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
 import vCardBillingAddress from './CardBillingAddress.vue'
 
-vi.mock('./globals/Badge.vue', () => ({
+vi.mock('./ui/Badge.vue', () => ({
   default: {
     name: 'vBadge',
     template: '<span><slot /></span>',
   }
 }))
-vi.mock('./globals/Text.vue', () => ({
+vi.mock('./ui/Text.vue', () => ({
   default: {
     name: 'vText',
     template: '<span><slot /></span>',
