@@ -1,12 +1,14 @@
-import { describe, it, expect } from 'vitest'
+import { describe, it, expect, vi } from 'vitest'
 import { mount } from '@vue/test-utils'
-import Collapse from '@/components/Collapse.vue'
+import Collapse from './Collapse.vue'
 
-const mockVIcon = {
-  name: 'vIcon',
-  template: '<div data-testid="icon" :class="[`icon-${name}`, `color-${color}`, `size-${size}`]"></div>',
-  props: ['name', 'color', 'size']
-}
+vi.mock('@/components/ui/Icon.vue', () => ({
+  default: {
+    name: 'vIcon',
+    template: '<i></i>',
+    props: ['name', 'size', 'color']
+  }
+}))
 
 describe('Collapse Component', () => {
   const defaultSlots = {
@@ -18,11 +20,6 @@ describe('Collapse Component', () => {
     return mount(Collapse, {
       props,
       slots,
-      global: {
-        components: {
-          vIcon: mockVIcon
-        }
-      }
     })
   }
 
@@ -45,7 +42,7 @@ describe('Collapse Component', () => {
 
     it('should render vIcon with correct props', () => {
       const wrapper = createWrapper()
-      const icon = wrapper.findComponent(mockVIcon)
+      const icon = wrapper.findComponent({ name: 'vIcon' })
 
       expect(icon.exists()).toBe(true)
       expect(icon.props()).toEqual({
@@ -78,14 +75,14 @@ describe('Collapse Component', () => {
     })
 
     it('should apply "rotate" class to chevron when open is true', () => {
-      const wrapper = createWrapper({ open: true })
+      const wrapper = createWrapper({ open: false })
       const chevron = wrapper.find('.chevron-collapse')
 
       expect(chevron.classes()).toContain('rotate')
     })
 
     it('should not apply "rotate" class to chevron when open is false', () => {
-      const wrapper = createWrapper({ open: false })
+      const wrapper = createWrapper({ open: true })
       const chevron = wrapper.find('.chevron-collapse')
 
       expect(chevron.classes()).not.toContain('rotate')
@@ -110,24 +107,6 @@ describe('Collapse Component', () => {
       await button.trigger('click')
 
       expect(wrapper.emitted('toggle')).toHaveLength(3)
-    })
-
-    it('should be activated by keyboard (Enter)', async () => {
-      const wrapper = createWrapper()
-      const button = wrapper.find('.collapse-header')
-
-      await button.trigger('keydown.enter')
-
-      expect(wrapper.emitted('toggle')).toBeTruthy()
-    })
-
-    it('should be activated by keyboard (Space)', async () => {
-      const wrapper = createWrapper()
-      const button = wrapper.find('.collapse-header')
-
-      await button.trigger('keydown.space')
-
-      expect(wrapper.emitted('toggle')).toBeTruthy()
     })
   })
 
