@@ -1,20 +1,22 @@
 <template>
-  <Collapse :open="isOpen" @toggle="toggleCollapse">
-    <template #title>
-      <vText tag="h2" type="headline-h6" color="neutral-700">Addresses</vText>
-    </template>
+  <section class="addresses-section" data-testid="addresses-section">
+    <Collapse :open="isOpen" @toggle="toggleCollapse">
+      <template #title>
+        <vText tag="h2" type="headline-h6" color="neutral-700">Addresses</vText>
+      </template>
 
-    <template #body>
-      <div class="addresses-wrapper">
-        <vCardBillingAddress
-          v-for="{ label, company } in data"
-          :key="company.name"
-          :label="label"
-          :company="company"
-        />
-      </div>
-    </template>
-  </Collapse>
+      <template #body>
+        <div class="addresses-wrapper">
+          <vCardBillingAddress
+            v-for="{ label, company } in data"
+            :key="company.name"
+            :label="label"
+            :company="company"
+          />
+        </div>
+      </template>
+    </Collapse>
+  </section>
 </template>
  
  <script setup>
@@ -39,6 +41,10 @@ const toggleCollapse = () => {
 </script>
  
 <style lang="scss" scoped>
+.addresses-section {
+  width: 100%;
+}
+
 .addresses-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

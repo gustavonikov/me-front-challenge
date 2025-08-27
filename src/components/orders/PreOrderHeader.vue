@@ -1,5 +1,5 @@
 <template>
-  <div class="pre-order-header">
+  <header class="pre-order-header">
     <template v-if="loading">
       <div
         class="pre-order-badge"
@@ -67,7 +67,7 @@
         </div>
       </div>
     </template>
-  </div>
+  </header>
 </template>
  
 <script setup>
