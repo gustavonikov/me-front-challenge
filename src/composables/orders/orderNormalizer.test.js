@@ -55,7 +55,7 @@ describe('Normalizers', () => {
         code: 'SUP123',
         name: 'Supplier Inc.',
         billingInfo: [
-          { type: 'cnpj', value: '12345678' },
+          { type: 'cnpj', value: 'CNPJ: 12345678' },
           { type: 'address', value: '123 Main St' },
           { type: 'name', value: 'Jane Doe' }
         ],
@@ -92,7 +92,7 @@ describe('Normalizers', () => {
             name: 'Company A',
             code: 'C001',
             billingInfo: [
-              { type: 'cnpj', value: '12345678' },
+              { type: 'cnpj', value: 'CNPJ: 12345678' },
               { type: 'address', value: '123 Main St' },
               { type: 'name', value: 'Alice' }
             ],

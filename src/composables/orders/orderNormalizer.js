@@ -4,6 +4,12 @@ function buildInfoFields(info, keys) {
     .filter(Boolean)
 }
 
+function buildDocumentField(document) {
+  if (!document) return {}
+  const type = document.type.toLowerCase()
+  return { type, value: `${document.type}: ${document.value}` }
+}
+
 export function normalizeHeader(data) {
   return {
     number: data.number,
@@ -19,9 +25,10 @@ export function normalizeHeader(data) {
 }
 
 export function normalizeSupplier(data) {
-  const documentType = data.document?.type?.toLowerCase()
+  const document = buildDocumentField(data.document)
+
   const billingFields = {
-    [documentType]: data.document?.value,
+    [document.type]: document.value,
     address: data.address,
     name: data.contact.name
   }
@@ -35,16 +42,17 @@ export function normalizeSupplier(data) {
   return {
     code: data.code,
     name: data.name,
-    billingInfo: buildInfoFields(billingFields, [documentType, 'address', 'name']),
+    billingInfo: buildInfoFields(billingFields, [document.type, 'address', 'name']),
     communicationInfo: buildInfoFields(communicationFields, ['email', 'phone', 'fax', 'readAt'])
   }
 }
 
 export function normalizeAddresses(data) {
   return data.map(addr => {
-    const documentType = addr.document?.type?.toLowerCase()
+    const document = buildDocumentField(addr.document)
+
     const billingFields = {
-      [documentType]: addr.document?.value,
+      [document.type]: document.value,
       address: addr.address,
       name: addr.contact.name
     }
@@ -60,7 +68,7 @@ export function normalizeAddresses(data) {
       company: {
         name: addr.name,
         code: addr.code,
-        billingInfo: buildInfoFields(billingFields, [documentType, 'address', 'name']),
+        billingInfo: buildInfoFields(billingFields, [document.type, 'address', 'name']),
         communicationInfo: buildInfoFields(communicationFields, ['email', 'phone', 'fax'])
       }
     }
