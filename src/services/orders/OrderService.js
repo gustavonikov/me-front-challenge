@@ -1,4 +1,4 @@
-import { BaseService } from '../../BaseService.js'
+import { BaseService } from '../BaseService.js'
 import './OrderTypes.js'
 
 export class OrderService extends BaseService {
