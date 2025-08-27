@@ -40,7 +40,7 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 #### Front-end
 
-- Vue.js (v3.5.18) - **Utiliza a Composition API**
+- Vue.js (v3.5.18) - **Utilizando Composition API**
 - Vue Router (v4.5.1)
 - Sass (v1.90.0)
 
