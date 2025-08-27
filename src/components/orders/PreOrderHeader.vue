@@ -1,18 +1,20 @@
 <template>
   <div class="pre-order-header">
     <div class="pre-order-badge">
-      <vText type="subtitle" color="neutral-white">Pre-Order</vText>
+      <vText type="subtitle" color="neutral-white" data-testid="pre-order-text">Pre-Order</vText>
 
-      <vText type="headline-h4" color="neutral-white">{{ data.number }}</vText>
+      <vText type="headline-h4" color="neutral-white" data-testid="pre-order-number">
+        {{ data.number }}
+      </vText>
 
-      <vText color="neutral-white">#{{ data.serial }}</vText>
+      <vText color="neutral-white" data-testid="pre-order-serial">#{{ data.serial }}</vText>
     </div>
 
     <div class="pre-order-details">
       <div class="buyer-info">
-        <vText class="title" tag="h1" type="headline-h5" color="neutral-700">{{
-          data.buyer
-        }}</vText>
+        <vText tag="h1" type="headline-h5" color="neutral-700" data-testid="buyer-name">
+          {{ data.buyer }}
+        </vText>
 
         <vCompanyDetails
           :billing-info="data.billingInfo"
@@ -22,12 +24,14 @@
       </div>
 
       <div class="pre-order-summary">
-        <vText type="headline-h5">{{ purchaseValue }}</vText>
+        <vText type="headline-h5" data-testid="purchase-value">{{ purchaseValue }}</vText>
 
-        <vText type="headline-h5" color="success-500">{{ data.status }}</vText>
+        <vText type="headline-h5" color="success-500" data-testid="pre-order-status">
+          {{ data.status }}
+        </vText>
 
         <div class="pre-order-creation-date">
-          <vText color="neutral-700">{{ createdAt }}</vText>
+          <vText color="neutral-700" data-testid="creation-date">{{ createdAt }}</vText>
 
           <vIcon name="info" color="neutral-300" size="sm" />
         </div>
