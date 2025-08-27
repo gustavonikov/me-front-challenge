@@ -1,5 +1,5 @@
 <template>
-  <div :class="`company-info -layout-${layout}`">
+  <div :class="`company-details -layout-${layout}`">
     <div
       v-if="billingInfo.length"
       class="billing-details"
@@ -51,7 +51,7 @@ defineProps({
 </script>
 
 <style lang="scss" scoped>
-.company-info {
+.company-details {
   display: flex;
 }
 
