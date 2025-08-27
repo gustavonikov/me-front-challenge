@@ -34,7 +34,7 @@ Siga os passos abaixo para instalar as dependências e executar o projeto em sua
    npm install
    ```
 
-4. **Duplique o arquivo .env.example e renomeie pra .env**
+4. **Duplique o arquivo `.env.example` e renomeie pra `.env`**
 
 5. **Inicie o servidor de desenvolvimento:**
 
