@@ -11,10 +11,8 @@ vi.mock('./CardBillingAddress.vue', () => ({
 }))
 
 const mockData = {
-  company: {
-    name: 'Jacksonville Group (Jason Burn)',
-    address: '123 Main St'
-  }
+  name: 'Jacksonville Group (Jason Burn)',
+  address: '123 Main St'
 }
 
 describe('SupplierInfo', () => {
@@ -36,7 +34,7 @@ describe('SupplierInfo', () => {
     const cardComponent = wrapper.findComponent({ name: 'vCardBillingAddress' })
 
     expect(cardComponent.props('label')).toBe('Supplier')
-    expect(cardComponent.props('company')).toEqual(mockData.company)
+    expect(cardComponent.props('company')).toEqual(mockData)
     expect(cardComponent.props('detailsLayout')).toBe('columns')
   })
 })
