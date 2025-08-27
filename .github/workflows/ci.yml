@@ -72,6 +72,7 @@ jobs:
         run: cp netlify.toml dist/netlify.toml
 
       - name: Deploy to Netlify
-        run: npx netlify-cli deploy --dir=dist --prod --site ${{ secrets.NETLIFY_SITE_ID }}
+        run: npx netlify-cli deploy --dir=dist --prod
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
