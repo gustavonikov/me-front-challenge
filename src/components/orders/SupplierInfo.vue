@@ -8,7 +8,7 @@ import vCardBillingAddress from './CardBillingAddress.vue'
 defineProps({
   data: {
     type: Array,
-    default: () => [],
+    default: () => {},
   },
 })
 </script>
