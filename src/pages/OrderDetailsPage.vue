@@ -3,7 +3,7 @@
     <div class="order-details-page">
       <vPreOrderHeader :loading="isPending" :data="header" />
 
-      <vSupplierInfo :data="supplier" />
+      <vSupplierInfo :loading="isPending" :data="supplier" />
 
       <vAddressesSection :data="addresses" />
     </div>
