@@ -35,7 +35,7 @@ export function normalizeSupplier(data) {
   return {
     code: data.code,
     name: data.name,
-    billingInfo: buildInfoFields(billingFields, ['cpnj', 'address', 'name']),
+    billingInfo: buildInfoFields(billingFields, [documentType, 'address', 'name']),
     communicationInfo: buildInfoFields(communicationFields, ['email', 'phone', 'fax', 'readAt'])
   }
 }
@@ -60,7 +60,7 @@ export function normalizeAddresses(data) {
       company: {
         name: addr.name,
         code: addr.code,
-        billingInfo: buildInfoFields(billingFields, ['cpnj', 'address', 'name']),
+        billingInfo: buildInfoFields(billingFields, [documentType, 'address', 'name']),
         communicationInfo: buildInfoFields(communicationFields, ['email', 'phone', 'fax'])
       }
     }
