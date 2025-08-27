@@ -57,6 +57,12 @@ defineProps({
 
 .-layout {
   &-columns {
+    gap: 4px;
+
+    @include mq(md, 'max') {
+      flex-direction: column;
+    }
+
     .billing-details,
     .communication-details {
       flex: 1;
@@ -71,6 +77,10 @@ defineProps({
     .communication-details {
       flex-direction: row;
       gap: 4px 16px;
+
+      @include mq(md, 'max') {
+        flex-direction: column;
+      }
     }
   }
 
