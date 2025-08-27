@@ -48,7 +48,7 @@ defineProps({
   width: 100%;
   border-radius: 8px;
   padding: 16px;
-  box-shadow: 0px 4px 8px 0px #00000014;
+  box-shadow: 0px 4px 8px 0px $me-shadow-level-1;
   background-color: $color-bg-primary;
 }
 
