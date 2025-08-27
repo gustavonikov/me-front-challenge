@@ -39,6 +39,16 @@ jobs:
       - name: Run E2E tests (Cypress)
         run: npm run test:e2e
 
+      - name: Deploy to Netlify
+        uses: netlify/actions/cli@v1
+        if: success() && github.ref == 'refs/heads/main'
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLY_SITE_ID }}
+        with:
+          build-dir: dist
+          prod: true
+
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: failure()
