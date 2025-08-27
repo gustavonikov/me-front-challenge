@@ -8,7 +8,7 @@
       aria-label="Toggle Collapse"
       type="button"
     >
-      <span class="chevron-collapse" :class="{ rotate: open }">
+      <span class="chevron-collapse" :class="{ rotate: !open }">
         <vIcon name="chevron-up" color="primary-500" size="xs" />
       </span>
 
