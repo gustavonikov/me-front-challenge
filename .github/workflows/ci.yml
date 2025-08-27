@@ -28,6 +28,9 @@ jobs:
       - name: Run unit tests (Vitest)
         run: npm run test
 
+      - name: Build project
+        run: npm run build
+
       - name: Run E2E tests (Cypress)
         run: npm run test:e2e
 
