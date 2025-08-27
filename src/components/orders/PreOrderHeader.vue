@@ -1,55 +1,94 @@
 <template>
   <div class="pre-order-header">
-    <div class="pre-order-badge">
-      <vText type="subtitle" color="neutral-white" data-testid="pre-order-text">Pre-Order</vText>
+    <template v-if="loading">
+      <div
+        class="pre-order-badge"
+        :style="{
+          height: '110px',
+        }"
+      ></div>
 
-      <vText type="headline-h4" color="neutral-white" data-testid="pre-order-number">
-        {{ data.number }}
-      </vText>
+      <div class="pre-order-details">
+        <div class="buyer-info">
+          <vSkeleton width="200px" height="28px" />
 
-      <vText color="neutral-white" data-testid="pre-order-serial">#{{ data.serial }}</vText>
-    </div>
+          <div>
+            <vSkeleton width="180px" />
+            <div>
+              <vSkeleton width="300px" />
+            </div>
+          </div>
+        </div>
 
-    <div class="pre-order-details">
-      <div class="buyer-info">
-        <vText tag="h1" type="headline-h5" color="neutral-700" data-testid="buyer-name">
-          {{ data.buyer }}
-        </vText>
+        <div class="pre-order-summary">
+          <vSkeleton width="100px" height="28px" />
+          <vSkeleton width="120px" height="28px" />
 
-        <vCompanyDetails
-          :billing-info="data.billingInfo"
-          :communication-info="data.communicationInfo"
-          layout="rows"
-        />
-      </div>
-
-      <div class="pre-order-summary">
-        <vText type="headline-h5" data-testid="purchase-value">{{ purchaseValue }}</vText>
-
-        <vText type="headline-h5" color="success-500" data-testid="pre-order-status">
-          {{ data.status }}
-        </vText>
-
-        <div class="pre-order-creation-date">
-          <vText color="neutral-700" data-testid="creation-date">{{ createdAt }}</vText>
-
-          <vIcon name="info" color="neutral-300" size="sm" />
+          <div>
+            <vSkeleton width="160px" />
+          </div>
         </div>
       </div>
-    </div>
+    </template>
+
+    <template v-else>
+      <div class="pre-order-badge">
+        <vText type="subtitle" color="neutral-white" data-testid="pre-order-text">Pre-Order</vText>
+
+        <vText type="headline-h4" color="neutral-white" data-testid="pre-order-number">
+          {{ data.number }}
+        </vText>
+
+        <vText color="neutral-white" data-testid="pre-order-serial">#{{ data.serial }}</vText>
+      </div>
+
+      <div class="pre-order-details">
+        <div class="buyer-info">
+          <vText tag="h1" type="headline-h5" color="neutral-700" data-testid="buyer-name">
+            {{ data.buyer }}
+          </vText>
+
+          <vCompanyDetails
+            :billing-info="data.billingInfo"
+            :communication-info="data.communicationInfo"
+            layout="rows"
+          />
+        </div>
+
+        <div class="pre-order-summary">
+          <vText type="headline-h5" data-testid="purchase-value">{{ purchaseValue }}</vText>
+
+          <vText type="headline-h5" color="success-500" data-testid="pre-order-status">
+            {{ data.status }}
+          </vText>
+
+          <div class="pre-order-creation-date">
+            <vText color="neutral-700" data-testid="creation-date">{{ createdAt }}</vText>
+
+            <vIcon name="info" color="neutral-300" size="sm" />
+          </div>
+        </div>
+      </div>
+    </template>
   </div>
 </template>
  
 <script setup>
+import { computed } from 'vue'
+
 import vCompanyDetails from './CompanyDetails.vue'
 import vIcon from '@/components/ui/Icon.vue'
 import vText from '@/components/ui/Text.vue'
-import { computed } from 'vue'
+import vSkeleton from '@/components/ui/Skeleton.vue'
 
 const props = defineProps({
   data: {
     type: Object,
     default: () => ({}),
+  },
+  loading: {
+    type: Boolean,
+    default: false,
   },
 })
 

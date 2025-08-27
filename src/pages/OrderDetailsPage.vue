@@ -1,7 +1,7 @@
 <template>
   <vPageContainer>
     <div class="order-details-page">
-      <vPreOrderHeader :data="header" />
+      <vPreOrderHeader :data="header" :loading="isPending" />
 
       <vSupplierInfo :data="supplier" />
 
@@ -23,7 +23,7 @@ import { onMounted } from 'vue'
 const route = useRoute()
 const orderId = route.params.id
 
-const { header, supplier, addresses, fetchOrder } = useOrder()
+const { header, supplier, addresses, fetchOrder, isPending } = useOrder()
 
 onMounted(() => {
   fetchOrder(orderId)
