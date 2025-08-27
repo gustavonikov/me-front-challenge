@@ -69,9 +69,7 @@ jobs:
         run: npm run build
 
       - name: Copy Netlify configs
-        run: |
-          cp netlify.toml dist/
-          cp _redirects dist/
+        run: cp netlify.toml dist/
 
       - name: Deploy to Netlify
         uses: netlify/actions/cli@master
@@ -79,5 +77,4 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         with:
-          args: |
-            deploy --dir=dist --no-build --prod --message "${{ github.event.head_commit.message }} (SHA: ${{ github.sha }})"
+          args: 'deploy --dir=dist --no-build --prod --message "${{ github.event.head_commit.message }} (SHA: ${{ github.sha }})"'
