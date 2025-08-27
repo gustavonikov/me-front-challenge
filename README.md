@@ -1,3 +1,7 @@
+### Site da aplicação
+
+[me-frontend-challenge.netlify.app](https://me-frontend-challenge.netlify.app/)
+
 ### ⚙️ Como instalar e rodar o projeto
 
 Siga os passos abaixo para instalar as dependências e executar o projeto em sua máquina local.
