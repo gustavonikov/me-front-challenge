@@ -25,5 +25,14 @@ export default defineConfig({
         `
       }
     }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://api.mercadoe.space',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, ''),
+      }
+    }
   }
 })
