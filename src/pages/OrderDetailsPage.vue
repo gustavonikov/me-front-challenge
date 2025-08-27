@@ -33,9 +33,9 @@
 
 <script setup>
 import vPageContainer from '@/components/ui/PageContainer.vue'
-import vPreOrderHeader from '@/components/PreOrderHeader.vue'
-import vSupplierInfo from '@/components/SupplierInfo.vue'
-import vAddressesSection from '@/components/AddressesSection.vue'
+import vPreOrderHeader from '@/components/orders/PreOrderHeader.vue'
+import vSupplierInfo from '@/components/orders/SupplierInfo.vue'
+import vAddressesSection from '@/components/orders/AddressesSection.vue'
 
 const headerMock = {
   number: 4510001114,
