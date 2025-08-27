@@ -1,6 +1,6 @@
 export const API_STATUS = {
   IDLE: 'idle',
-  PENDING: 'PENDING',
+  PENDING: 'pending',
   SUCCESS: 'success',
   ERROR: 'error'
 }
