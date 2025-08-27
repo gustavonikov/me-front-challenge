@@ -6,10 +6,10 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/orders/1',
+      redirect: '/orders-details/1',
     },
     {
-      path: '/orders/:id',
+      path: '/orders-details/:id',
       component: OrderDetailsPage,
       name: 'order-details'
     }
