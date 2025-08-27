@@ -5,7 +5,7 @@
 export class HttpClient {
   /**
    * @param {string} url
-   * @param {object} config (headers, params, etc.)
+   * @param {object} config
    * @returns {Promise<any>}
    */
   async get(url, config = {}) { // eslint-disable-line
