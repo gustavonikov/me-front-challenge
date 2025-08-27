@@ -6,7 +6,8 @@ vi.mock('./CompanyDetailsField.vue', () => ({
   default: {
     name: 'vCompanyDetailsField',
     template: '<div data-testid="mocked-company-details-field">{{ value }}</div>',
-    props: ['field', 'value']
+    props: ['field', 'value'],
+    inheritAttrs: false
   }
 }))
 
@@ -51,8 +52,11 @@ describe('CompanyDetails', () => {
 
   it('renders communication fields correctly', () => {
     const wrapper = createWrapper({ billingInfo: [], communicationInfo })
+    console.log(wrapper.html());
+
     const communicationDetails = wrapper.find('.communication-details')
     const communicationItems = communicationDetails.findAll('[data-testid="mocked-company-details-field"]')
+
     expect(communicationItems.length).toBe(communicationInfo.length)
     communicationItems.forEach((item, index) => {
       expect(item.text()).toBe(communicationInfo[index].value)
