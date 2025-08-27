@@ -35,7 +35,7 @@ import vPageContainer from '@/components/ui/PageContainer.vue'
 import vPreOrderHeader from '@/components/orders/PreOrderHeader.vue'
 import vSupplierInfo from '@/components/orders/SupplierInfo.vue'
 import vAddressesSection from '@/components/orders/AddressesSection.vue'
-import Error from '@/components/ui/Error.vue'
+import Error from '@/components/ui/ErrorState.vue'
 import vText from '@/components/ui/Text.vue'
 
 const route = useRoute()
