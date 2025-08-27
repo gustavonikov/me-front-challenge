@@ -26,8 +26,8 @@ import vCardBillingAddress from './CardBillingAddress.vue'
 
 defineProps({
   data: {
-    type: Array,
-    default: () => [],
+    type: Object,
+    default: () => ({}),
   },
 })
 

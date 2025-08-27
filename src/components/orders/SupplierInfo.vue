@@ -1,5 +1,5 @@
 <template>
-  <vCardBillingAddress label="Supplier" :company="data.company" details-layout="columns" />
+  <vCardBillingAddress label="Supplier" :company="data" details-layout="columns" />
 </template>
  
 <script setup>
@@ -7,8 +7,8 @@ import vCardBillingAddress from './CardBillingAddress.vue'
 
 defineProps({
   data: {
-    type: Array,
-    default: () => {},
+    type: Object,
+    default: () => ({}),
   },
 })
 </script>

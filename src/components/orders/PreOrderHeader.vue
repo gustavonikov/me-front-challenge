@@ -3,14 +3,16 @@
     <div class="pre-order-badge">
       <vText type="subtitle" color="neutral-white">Pre-Order</vText>
 
-      <vText type="headline-h4" color="neutral-white">4510001114</vText>
+      <vText type="headline-h4" color="neutral-white">{{ data.number }}</vText>
 
-      <vText color="neutral-white">#ME11223344</vText>
+      <vText color="neutral-white">#{{ data.serial }}</vText>
     </div>
 
     <div class="pre-order-details">
       <div class="buyer-info">
-        <vText class="title" tag="h1" type="headline-h5" color="neutral-700">MTP West Buyer</vText>
+        <vText class="title" tag="h1" type="headline-h5" color="neutral-700">{{
+          data.buyer
+        }}</vText>
 
         <vCompanyDetails
           :billing-info="data.billingInfo"
@@ -20,12 +22,12 @@
       </div>
 
       <div class="pre-order-summary">
-        <vText type="headline-h5">USD 20000</vText>
+        <vText type="headline-h5">{{ purchaseValue }}</vText>
 
-        <vText type="headline-h5" color="success-500">Need to confirm</vText>
+        <vText type="headline-h5" color="success-500">{{ data.status }}</vText>
 
         <div class="pre-order-creation-date">
-          <vText color="neutral-700">Created at 2020-04-16 at 15:32:55</vText>
+          <vText color="neutral-700">{{ createdAt }}</vText>
 
           <vIcon name="info" color="neutral-300" size="sm" />
         </div>
@@ -38,15 +40,28 @@
 import vCompanyDetails from './CompanyDetails.vue'
 import vIcon from '@/components/ui/Icon.vue'
 import vText from '@/components/ui/Text.vue'
+import { computed } from 'vue'
 
-defineProps({
+const props = defineProps({
   data: {
     type: Object,
-    default: () => ({
-      billingInfo: [],
-      communicationInfo: [],
-    }),
+    default: () => ({}),
   },
+})
+
+const purchaseValue = computed(() => `${props.data.currency} ${props.data.price}`)
+const createdAt = computed(() => {
+  if (props.data.createdAt == null) return ''
+
+  const date = new Date(props.data.createdAt)
+  const year = date.getFullYear()
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  const hours = String(date.getHours()).padStart(2, '0')
+  const minutes = String(date.getMinutes()).padStart(2, '0')
+  const seconds = String(date.getSeconds()).padStart(2, '0')
+
+  return `Created on ${year}-${month}-${day} at ${hours}:${minutes}:${seconds}`
 })
 </script>
  
