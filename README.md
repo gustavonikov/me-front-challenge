@@ -65,8 +65,8 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - `npm run test`: Roda todos os testes de unidade uma única vez.
 - `npm run test:unit`: Inicia o Vitest em modo de observação (watch), rodando os testes a cada alteração nos arquivos.
-- `npm run test:coverage`: Executa os testes e gera um relatório de cobertura de código.
 - `npm run test:unit -- <caminho-do-arquivo>`: Roda os testes apenas para um arquivo específico.
+- `npm run test:coverage`: Executa os testes e gera um relatório de cobertura de código.
 
 #### Testes E2E (Cypress)
 
