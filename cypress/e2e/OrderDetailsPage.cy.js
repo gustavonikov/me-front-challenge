@@ -50,7 +50,7 @@ describe('OrderDetailsPage', () => {
       it('should display the supplier section with correct data', () => {
         cy.getByTestId('supplier-info').within(() => {
           cy.getByTestId('card-billing-address').within(() => {
-            cy.getByTestId('card-label').should('have.text', 'Supplier')
+            cy.getByTestId('card-label').should('have.text', 'TESTING CD')
             cy.getByTestId('company-name').should('have.text', ORDER_DATA_MOCK.supplier.name)
             cy.getByTestId('company-code').should('have.text', `#${ORDER_DATA_MOCK.supplier.code}`)
 
@@ -215,7 +215,7 @@ describe('OrderDetailsPage', () => {
       it('should display the supplier section with correct data', () => {
         cy.getByTestId('supplier-info').within(() => {
           cy.getByTestId('card-billing-address').within(() => {
-            cy.getByTestId('card-label').should('have.text', 'Supplier')
+            cy.getByTestId('card-label').should('have.text', 'TESTING CD')
             cy.getByTestId('company-name').should('have.text', ORDER_DATA_MOCK.supplier.name)
             cy.getByTestId('company-code').should('have.text', `#${ORDER_DATA_MOCK.supplier.code}`)
 
