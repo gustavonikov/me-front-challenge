@@ -1,4 +1,4 @@
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { OrderService } from '@/services/orders/OrderService'
 import { httpClient } from '@/config/httpConfig'
 import { API_STATUS } from '@/constants/apiStatus'
@@ -11,6 +11,10 @@ export function useOrder() {
   const supplier = ref({})
   const addresses = ref({})
   const status = ref(API_STATUS.IDLE)
+
+  const isPending = computed(() => status.value === API_STATUS.PENDING)
+  const wasSuccessful = computed(() => status.value === API_STATUS.SUCCESS)
+  const hasError = computed(() => status.value === API_STATUS.ERROR)
 
   /**
    * @param {string|number} id
@@ -39,6 +43,9 @@ export function useOrder() {
     supplier,
     addresses,
     status,
+    isPending,
+    wasSuccessful,
+    hasError,
     fetchOrder,
   }
 }
