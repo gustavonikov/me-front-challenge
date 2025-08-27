@@ -33,7 +33,7 @@ describe('SupplierInfo', () => {
     const wrapper = createWrapper({ data: mockData })
     const cardComponent = wrapper.findComponent({ name: 'vCardBillingAddress' })
 
-    expect(cardComponent.props('label')).toBe('Supplier')
+    expect(cardComponent.props('label')).toBe('TESTING CD')
     expect(cardComponent.props('company')).toEqual(mockData)
     expect(cardComponent.props('detailsLayout')).toBe('columns')
   })
