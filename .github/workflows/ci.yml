@@ -73,7 +73,7 @@ jobs:
 
       - name: Deploy to Netlify
         run: |
-          netlify deploy --dir=dist --prod --message "🚀 Deploy via GitHub Actions
+          npx netlify-cli deploy --dir=dist --prod --message "🚀 Deploy via GitHub Actions
           📝 Commit: ${{ github.event.head_commit.message }}
           👤 Author: ${{ github.event.head_commit.author.name }}
           🔗 SHA: ${{ github.sha }}
