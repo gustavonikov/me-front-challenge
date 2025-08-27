@@ -8,7 +8,6 @@ export class OrderService extends BaseService {
   }
 
   /**
-   * Get order by ID
    * @param {string|number} id - Order ID
    * @returns {Promise<Order>} - Order object
    */
