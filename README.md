@@ -4,6 +4,14 @@
 
 [me-frontend-challenge.netlify.app](https://me-frontend-challenge.netlify.app/)
 
+### 📋 Funcionalidades
+
+- **Gestão de Pedidos**: Visualização detalhada de pre-orders com informações completas
+- **Dados do Comprador**: Exibição de informações de contato, telefones e detalhes do pedido
+- **Informações do Fornecedor**: Dados completos do supplier incluindo CNPJ e contatos
+- **Gestão de Endereços**: Sistema de endereços com categorização (Ship to, Bill to, Charge to)
+- **Interface Responsiva**: Layout adaptado para diferentes dispositivos
+
 ### ⚙️ Como instalar e rodar o projeto
 
 Siga os passos abaixo para instalar as dependências e executar o projeto em sua máquina local.
@@ -57,7 +65,34 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 - Vitest (v3.2.4)
 - Cypress (v14.5.3)
-- Vitest (v3.2.4)
+
+### 📁 Estrutura do Projeto
+
+```
+src/
+├── assets/             # Recursos estáticos
+├── components/         # Componentes reutilizáveis
+│   ├── orders/         # Componentes relacionados a pedidos
+│   └── ui/             # Componentes de interface
+├── composables/        # Composables Vue
+├── config/             # Configurações da aplicação
+├── constants/          # Constantes do projeto
+├── http/               # Configurações HTTP
+├── pages/              # Páginas da aplicação
+├── router/             # Configuração das rotas
+└── services/           # Serviços e API calls
+```
+
+### 🌐 Scripts Disponíveis
+
+#### Build e Preview
+
+- `npm run build`: Gera a build para produção
+- `npm run preview`: Preview da build de produção
+
+#### Qualidade de Código
+
+- `npm run lint:check`: Verifica problemas de linting
 
 ### 🧪 Como rodar os testes
 
@@ -73,6 +108,24 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 - `npm run test:e2e`: Inicia a aplicação e executa os testes de ponta a ponta em modo headless (sem interface gráfica).
 - `npm run test:e2e:dev`: Inicia a aplicação e abre a interface do Cypress para rodar os testes em modo interativo.
 - `npm run test:e2e:dev -- --spec "cypress/e2e/<nome-do-arquivo>.cy.js"`: Abre o Cypress e roda os testes apenas para um arquivo específico.
+
+### 🚀 Deploy e CI/CD
+
+Este projeto utiliza **GitHub Actions** para integração e deploy contínuo:
+
+- **Testes automatizados**: Executa linting, testes unitários e E2E
+- **Deploy automático**: Deploy no Netlify após aprovação nos testes
+- **Branch protection**: Apenas código testado é mergeado na main
+
+O deploy é feito automaticamente no **Netlify** quando há push na branch `main`.
+
+### 💡 Decisões Técnicas
+
+- **Vue 3 + Composition API**: Melhor organização de código e reatividade
+- **Vite**: Build tool mais rápida e moderna
+- **Ofetch**: Cliente HTTP leve e moderno para requisições
+- **Sass**: Pré-processador CSS para maior flexibilidade de estilização
+- **Vitest + Cypress**: Cobertura completa de testes (unitários e E2E)
 
 ### 🎨 Divergências do layout original
 
