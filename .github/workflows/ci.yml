@@ -72,7 +72,12 @@ jobs:
         run: cp netlify.toml dist/netlify.toml
 
       - name: Deploy to Netlify
-        run: npx netlify-cli deploy --dir=dist --prod
-        env:
+        run: |
+          netlify deploy --dir=dist --prod --message "🚀 Deploy via GitHub Actions
+          📝 Commit: ${{ github.event.head_commit.message }}
+          👤 Author: ${{ github.event.head_commit.author.name }}
+          🔗 SHA: ${{ github.sha }}
+          🌿 Branch: ${{ github.ref_name }}"
+              env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
