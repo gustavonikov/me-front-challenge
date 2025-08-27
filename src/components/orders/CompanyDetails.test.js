@@ -52,7 +52,7 @@ describe('CompanyDetails', () => {
   it('renders communication fields correctly', () => {
     const wrapper = createWrapper({ billingInfo: [], communicationInfo })
     const communicationDetails = wrapper.find('.communication-details')
-    const communicationItems = communicationDetails.findAll('[data-testid="mocked-field"]')
+    const communicationItems = communicationDetails.findAll('[data-testid="mocked-company-details-field"]')
     expect(communicationItems.length).toBe(communicationInfo.length)
     communicationItems.forEach((item, index) => {
       expect(item.text()).toBe(communicationInfo[index].value)
