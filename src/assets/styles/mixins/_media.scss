@@ -2,7 +2,7 @@
 @use 'sass:meta';
 @use '../variables.scss' as *;
 
-@mixin mq($breakpoint, $type: 'min', $orientation: 'width') {
+@mixin mq($breakpoint, $type: 'max', $orientation: 'width') {
   $value: null;
 
   @if meta.type-of($breakpoint) == number {
