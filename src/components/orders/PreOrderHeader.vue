@@ -80,7 +80,7 @@ const createdAt = computed(() => {
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   padding: 16px;
-  width: 200px;
+  min-width: 200px;
 }
 
 .pre-order-details {
