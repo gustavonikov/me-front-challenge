@@ -37,7 +37,7 @@ const contentId = computed(() => {
 defineProps({
   open: {
     type: Boolean,
-    default: false,
+    default: true,
   },
 })
 </script>

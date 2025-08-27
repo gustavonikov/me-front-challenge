@@ -31,7 +31,7 @@ defineProps({
   },
 })
 
-const isOpen = ref(false)
+const isOpen = ref(true)
 
 const toggleCollapse = () => {
   isOpen.value = !isOpen.value
