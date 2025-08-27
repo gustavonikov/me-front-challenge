@@ -5,7 +5,7 @@
     </template>
 
     <template v-else>
-      <vCardBillingAddress label="TESTING CD" :company="data" details-layout="columns" />
+      <vCardBillingAddress label="Supplier" :company="data" details-layout="columns" />
     </template>
   </section>
 </template>
