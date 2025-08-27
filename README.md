@@ -61,8 +61,6 @@ Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
 ### 🧪 Como rodar os testes
 
-Para garantir o bom funcionamento da aplicação, utilize os seguintes comandos:
-
 #### Testes de Unidade (Vitest)
 
 - `npm run test`: Roda todos os testes de unidade uma única vez.
@@ -70,7 +68,7 @@ Para garantir o bom funcionamento da aplicação, utilize os seguintes comandos:
 - `npm run test:coverage`: Executa os testes e gera um relatório de cobertura de código.
 - `npm run test:unit -- <caminho-do-arquivo>`: Roda os testes apenas para um arquivo específico.
 
-#### Testes de Ponta a Ponta (Cypress)
+#### Testes E2E (Cypress)
 
 - `npm run test:e2e`: Inicia a aplicação e executa os testes de ponta a ponta em modo headless (sem interface gráfica).
 - `npm run test:e2e:dev`: Inicia a aplicação e abre a interface do Cypress para rodar os testes em modo interativo.
