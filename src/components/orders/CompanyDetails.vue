@@ -11,6 +11,7 @@
         :key="info.type"
         :field="info.type"
         :value="info.value"
+        :data-testid="`company-details-${info.type}`"
       />
     </div>
 
@@ -25,6 +26,7 @@
         :key="info.type"
         :field="info.type"
         :value="info.value"
+        :data-testid="`company-details-${info.type}`"
       />
     </div>
   </div>
