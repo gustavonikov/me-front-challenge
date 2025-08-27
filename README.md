@@ -1,57 +1,75 @@
-# me-frontend-challenge
+### ⚙️ Como instalar e rodar o projeto
 
-This template should help get you started developing with Vue 3 in Vite.
+Siga os passos abaixo para instalar as dependências e executar o projeto em sua máquina local.
 
-## Recommended IDE Setup
+1. **Clone o repositório:**
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+   ```bash
+   git clone https://github.com/gustavonikov/me-front-challenge.git
+   ```
 
-## Customize configuration
+2. **Acesse o diretório do projeto:**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+   ```bash
+   cd me-front-challenge
+   ```
 
-## Project Setup
+3. **Instale as dependências:**
 
-```sh
-npm install
-```
+   ```bash
+   npm install
+   ```
 
-### Compile and Hot-Reload for Development
+4. **Inicie o servidor de desenvolvimento:**
 
-```sh
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
-### Compile and Minify for Production
+Se não abrir automaticamente, o projeto estará disponível no seu navegador em `http://localhost:5173`.
 
-```sh
-npm run build
-```
+---
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+### 🛠️ Tecnologias utilizadas
 
-```sh
-npm run test:unit
-```
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+**Front-end**
 
-```sh
-npm run test:e2e:dev
-```
+- Vue.js (v3.5.18) - **Utiliza a Composition API**
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+**Ferramentas de Desenvolvimento**
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+- Vite (v7.0.6)
+- ESLint e Prettier
 
-```sh
-npm run build
-npm run test:e2e
-```
+**Testes**
 
-### Lint with [ESLint](https://eslint.org/)
+- Vitest (v3.2.4)
+- Cypress (v14.5.3)
 
-```sh
-npm run lint
-```
+**Requisições HTTP**
+
+- ofetch
+
+**Navegação e Estilo**
+
+- Vue Router (v4.5.1)
+- Sass (v1.90.0)
+
+### 🧪 Como rodar os testes
+
+Para garantir o bom funcionamento da aplicação, utilize os seguintes comandos:
+
+**Testes de Unidade (Vitest)**
+
+- `npm run test`: Roda todos os testes de unidade uma única vez.
+- `npm run test:unit`: Inicia o Vitest em modo de observação (watch), rodando os testes a cada alteração nos arquivos.
+- `npm run test:coverage`: Executa os testes e gera um relatório de cobertura de código.
+- `npm run test:unit -- <caminho-do-arquivo>`: Roda os testes apenas para um arquivo específico.
+
+**Testes de Ponta a Ponta (Cypress)**
+
+- `npm run test:e2e`: Inicia a aplicação e executa os testes de ponta a ponta em modo headless (sem interface gráfica).
+- `npm run test:e2e:dev`: Inicia a aplicação e abre a interface do Cypress para rodar os testes em modo interativo.
+- `npm run test:e2e:dev -- --spec "cypress/e2e/<nome-do-arquivo>.cy.js"`: Abre o Cypress e roda os testes apenas para um arquivo específico.
