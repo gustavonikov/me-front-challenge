@@ -128,6 +128,7 @@ O deploy é feito automaticamente no **Netlify** quando há push na branch `main
 - **Ofetch**: Cliente HTTP leve e moderno para requisições
 - **Sass**: Pré-processador CSS para maior flexibilidade de estilização
 - **Vitest + Cypress**: Cobertura completa de testes (unitários e E2E)
+- **Arquitetura de Inversão de Controle (IoC) via Injeção de Dependência (DI)**: Utilizamos este padrão para desacoplar a camada de serviço da implementação do cliente HTTP. O uso de adaptadores permite que dependências como o HttpClient sejam facilmente substituídas, o que simplifica testes e futuras manutenções.
 
 ### 🎨 Divergências do layout original
 
