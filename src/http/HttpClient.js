@@ -4,53 +4,48 @@
  */
 export class HttpClient {
   /**
-   * Performs a GET request
-   * @param {string} url - Request URL
-   * @param {object} config - Additional configuration (headers, params, etc.)
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {object} config (headers, params, etc.)
+   * @returns {Promise<any>}
    */
   async get(url, config = {}) { // eslint-disable-line
     throw new Error('Method get must be implemented')
   }
 
   /**
-   * Performs a POST request
-   * @param {string} url - Request URL
-   * @param {any} data - Data to be sent in the body
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {any} data
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async post(url, data, config = {}) { // eslint-disable-line
     throw new Error('Method post must be implemented')
   }
 
   /**
-   * Performs a PUT request
-   * @param {string} url - Request URL
-   * @param {any} data - Data to be sent in the body
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {any} data
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async put(url, data, config = {}) { // eslint-disable-line
     throw new Error('Method put must be implemented')
   }
 
   /**
-   * Performs a PATCH request
-   * @param {string} url - Request URL
-   * @param {any} data - Data to be sent in the body
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {any} data
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async patch(url, data, config = {}) { // eslint-disable-line
     throw new Error('Method patch must be implemented')
   }
 
   /**
-   * Performs a DELETE request
-   * @param {string} url - Request URL
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async delete(url, config = {}) { // eslint-disable-line
     throw new Error('Method delete must be implemented')

@@ -7,7 +7,7 @@ import { HttpClient } from '../HttpClient.js'
 export class OFetchAdapter extends HttpClient {
   /**
    * Constructor
-   * @param {Function} ofetchInstance - Configured oFetch instance
+   * @param {Function} ofetchInstance
    */
   constructor(ofetchInstance) {
     super()
@@ -15,10 +15,9 @@ export class OFetchAdapter extends HttpClient {
   }
 
   /**
-   * Performs a GET request
-   * @param {string} url - Request URL
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async get(url, config = {}) {
     return await this.client(url, {
@@ -28,11 +27,10 @@ export class OFetchAdapter extends HttpClient {
   }
 
   /**
-   * Performs a POST request
-   * @param {string} url - Request URL
-   * @param {any} data - Data to be sent in the body
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {any} data
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async post(url, data, config = {}) {
     return await this.client(url, {
@@ -43,11 +41,10 @@ export class OFetchAdapter extends HttpClient {
   }
 
   /**
-   * Performs a PUT request
-   * @param {string} url - Request URL
-   * @param {any} data - Data to be sent in the body
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {any} data
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async put(url, data, config = {}) {
     return await this.client(url, {
@@ -58,11 +55,10 @@ export class OFetchAdapter extends HttpClient {
   }
 
   /**
-   * Performs a PATCH request
-   * @param {string} url - Request URL
-   * @param {any} data - Data to be sent in the body
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {any} data
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async patch(url, data, config = {}) {
     return await this.client(url, {
@@ -73,10 +69,9 @@ export class OFetchAdapter extends HttpClient {
   }
 
   /**
-   * Performs a DELETE request
-   * @param {string} url - Request URL
-   * @param {object} config - Additional configuration
-   * @returns {Promise<any>} - Response data
+   * @param {string} url
+   * @param {object} config
+   * @returns {Promise<any>}
    */
   async delete(url, config = {}) {
     return await this.client(url, {
