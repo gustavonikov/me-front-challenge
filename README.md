@@ -78,7 +78,7 @@ Para garantir o bom funcionamento da aplicação, utilize os seguintes comandos:
 - `npm run test:e2e:dev`: Inicia a aplicação e abre a interface do Cypress para rodar os testes em modo interativo.
 - `npm run test:e2e:dev -- --spec "cypress/e2e/<nome-do-arquivo>.cy.js"`: Abre o Cypress e roda os testes apenas para um arquivo específico.
 
-#### Divergências do layout original
+### Divergências do layout original
 
 - Mudança no texto de "Created at" pra "Created on" pra ficar mais natural em inglês.
 - Os cards de Addresses estavam com dois padrões: um com duas colunas e o outro com uma só coluna. Acho que o correto era ter um padrão pro card na exibição das informações, pra não ficarem alturas diferentes e buracos entre as linhas conforme terem mais cards, então adotei o padrão de só uma coluna porque é mais escalável, pois se aparecerem mais propriedades ficaria mais complexo e também é melhor pra responsividade.
