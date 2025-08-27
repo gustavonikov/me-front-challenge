@@ -56,7 +56,7 @@ describe('PreOrderHeader', () => {
     expect(preOrderNumber.text()).toContain(dataMock.number)
   })
 
-  it('should display pre-order serial with #', () => {
+  it('should display pre-order serial with #ME', () => {
     const preOrderSerial = wrapper.find('[data-testid="pre-order-serial"]')
     expect(preOrderSerial.text()).toContain(dataMock.serial)
   })

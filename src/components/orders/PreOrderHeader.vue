@@ -6,44 +6,41 @@
         :style="{
           height: '110px',
         }"
+        data-testid="pre-order-badge-skeleton"
       ></div>
 
-      <div class="pre-order-details">
+      <div class="pre-order-details" data-testid="pre-order-details-skeleton">
         <div class="buyer-info">
-          <vSkeleton width="200px" height="28px" />
+          <vSkeleton width="200px" height="28px" data-testid="buyer-name-skeleton" />
 
           <div>
-            <vSkeleton width="180px" />
-            <div>
-              <vSkeleton width="300px" />
-            </div>
+            <vSkeleton width="180px" data-testid="details-skeleton" />
+            <vSkeleton width="300px" data-testid="details-skeleton" />
           </div>
         </div>
 
         <div class="pre-order-summary">
-          <vSkeleton width="100px" height="28px" />
-          <vSkeleton width="120px" height="28px" />
+          <vSkeleton width="100px" height="28px" data-testid="purchase-value-skeleton" />
+          <vSkeleton width="120px" height="28px" data-testid="pre-order-status-skeleton" />
 
-          <div>
-            <vSkeleton width="160px" />
-          </div>
+          <vSkeleton width="160px" data-testid="pre-order-creation-date" />
         </div>
       </div>
     </template>
 
     <template v-else>
-      <div class="pre-order-badge">
+      <div class="pre-order-badge" data-testid="pre-order-badge">
         <vText type="subtitle" color="neutral-white" data-testid="pre-order-text">Pre-Order</vText>
 
         <vText type="headline-h4" color="neutral-white" data-testid="pre-order-number">
           {{ data.number }}
         </vText>
 
-        <vText color="neutral-white" data-testid="pre-order-serial">#{{ data.serial }}</vText>
+        <vText color="neutral-white" data-testid="pre-order-serial">#ME{{ data.serial }}</vText>
       </div>
 
-      <div class="pre-order-details">
-        <div class="buyer-info">
+      <div class="pre-order-details" data-testid="pre-order-details">
+        <div class="buyer-info" data-testid="buyer-info">
           <vText tag="h1" type="headline-h5" color="neutral-700" data-testid="buyer-name">
             {{ data.buyer }}
           </vText>
@@ -55,7 +52,7 @@
           />
         </div>
 
-        <div class="pre-order-summary">
+        <div class="pre-order-summary" data-testid="pre-order-summary">
           <vText type="headline-h5" data-testid="purchase-value">{{ purchaseValue }}</vText>
 
           <vText type="headline-h5" color="success-500" data-testid="pre-order-status">
