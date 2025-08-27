@@ -8,9 +8,9 @@
           {{ company.name }}
         </vText>
 
-        <vBadge v-if="company.code" variant="primary-light" data-testid="company-code">
-          #{{ company.code }}
-        </vBadge>
+        <vBadge v-if="company.code" variant="primary-light" data-testid="company-code"
+          >#{{ company.code }}</vBadge
+        >
       </div>
     </div>
 
