@@ -18,6 +18,8 @@
 
 Siga os passos abaixo para instalar as dependências e executar o projeto em sua máquina local.
 
+#### Você precisa ter a versão 20.19.0 (ou maior) do Node.js instalado na máquina
+
 1. **Clone o repositório:**
 
    ```bash
