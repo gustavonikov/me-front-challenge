@@ -11,6 +11,8 @@
 - **Informações do Fornecedor**: Dados completos do supplier incluindo CNPJ e contatos
 - **Gestão de Endereços**: Sistema de endereços com categorização (Ship to, Bill to, Charge to)
 - **Interface Responsiva**: Layout adaptado para diferentes dispositivos
+- **Estado de loading**: Foram criados Skeletons para deixar mais UI Friendly e evitar CLS enquanto os dados carregam
+- **Feedback de erro**: Caso aconteça algum erro ao buscar dados, deverá aparecer um componente de erro na página
 
 ### ⚙️ Como instalar e rodar o projeto
 
